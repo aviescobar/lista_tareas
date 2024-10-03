@@ -21,5 +21,31 @@ def lista_tareas():
         print("4. Salir")
 
    
-      
+        opcion = input("Ingrese una opción: ")
+
+        if opcion == "1":
+            descripcion = input("Ingrese la descripción de la tarea: ")
+            tareas.append(Tarea(descripcion))
+
+ elif opcion == "2":
+            for i, tarea in enumerate(tareas, start=1):
+                print(f"{i}. {tarea}")
+        elif opcion == "3":
+            if tareas:
+                for i, tarea in enumerate(tareas, start=1):
+                    print(f"{i}. {tarea}")
+                opcion = int(input("Ingrese el número de la tarea a completar: "))
+                if opcion > 0 and opcion <= len(tareas):
+                    tareas[opcion - 1].completar()
+                else:
+                    print("Error: Opción no válida")
+            else:
+                print("No hay tareas")
+        elif opcion == "4":
+            break
+        else:
+            print("Error: Opción no válida")
+
+lista_tareas()
+           
   
