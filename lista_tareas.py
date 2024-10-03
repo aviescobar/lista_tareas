@@ -9,7 +9,10 @@ class Tarea:
     def __str__(self):
         estado = "Completada" if self.completada else "Pendiente"
         return f"{self.descripcion} - {estado}"
+       
 def lista_tareas():
+    tareas = []
+
    
       
   
