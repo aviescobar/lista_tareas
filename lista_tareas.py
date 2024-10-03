@@ -13,6 +13,13 @@ class Tarea:
 def lista_tareas():
     tareas = []
 
+     
+    while True:
+        print("\n1. Agregar tarea")
+        print("2. Ver tareas")
+        print("3. Completar tarea")
+        print("4. Salir")
+
    
       
   
